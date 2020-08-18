@@ -50,7 +50,12 @@ func main() {
 		io.Copy(w, bytes.NewReader(b))
 	})
 
-	addr := config.File().GetString("port.development")
-	log.Println("serving files at", addr)
-	log.Fatal(http.ListenAndServe(addr, nil))
+	switch config.File().GetString("environment") {
+	case "development":
+		addr := config.File().GetString("port.development")
+		log.Println("serving files at", addr)
+		panic(http.ListenAndServe(addr, nil))
+	default:
+		panic("Environment not set")
+	}
 }
