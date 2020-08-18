@@ -12,7 +12,7 @@ import (
 )
 
 // Serve a file from the backblaze cloude storrage.
-func Serve(bucket, key string) (*s3.GetObjectOutput, error) {
+func Serve(log *log.Logger, bucket, key string) (*s3.GetObjectOutput, error) {
 	s3Config := &aws.Config{
 		Credentials: credentials.NewStaticCredentials(
 			config.File().GetString("backblaze.keyID"),
