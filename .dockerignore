@@ -1,0 +1,9 @@
+.git
+.gitignore
+badger.db
+config.json
+config.json.dev
+Dockerfile
+docker-compose.yml
+go.sum
+makefile

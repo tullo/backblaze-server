@@ -1,0 +1,10 @@
+version: '3.7'
+services:
+  bzserver:
+    image: bzserver:1.0.0
+    build:
+      context: .
+    ports:
+    - 9090:9090
+    volumes:
+      - ./config.json:/app/config.json:ro
