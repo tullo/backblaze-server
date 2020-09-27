@@ -1,14 +1,15 @@
-FROM golang:1.15-alpine3.12 AS go-builder
-ADD . /build/
+FROM golang:1.15.2-alpine3.12 AS go-builder
+ENV CGO_ENABLED 0
 WORKDIR /build
-RUN CGO_ENABLED=0 GOOS=linux go build -o main
-
+COPY . .
+WORKDIR /build/app/backblaze-server
+RUN go build -o server
 
 FROM alpine:3.12
 RUN apk --no-cache add ca-certificates
-RUN addgroup -g 1000 -S app && adduser -u 1000 -S app -G app --no-create-home --disabled-password \
+RUN addgroup -g 3000 -S app && adduser -u 100000 -S app -G app --no-create-home --disabled-password \
     && mkdir -p /app/badger.db && chown app:app /app/badger.db
-USER app
+USER 100000
 WORKDIR /app
-COPY --from=go-builder --chown=app:app /build/main /app/bzserver
-ENTRYPOINT ["./bzserver"]
+COPY --from=go-builder --chown=app:app /build/app/backblaze-server/server /app/server
+ENTRYPOINT ["./server"]
