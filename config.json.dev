@@ -9,5 +9,5 @@
   "backblaze.s3.endpoint" : "https://s3.eu-central-003.backblazeb2.com",
   "backblaze.keyID" : "...",
   "backblaze.applicationKey" : "...",
-  "backblaze.token" : "",
+  "backblaze.token" : ""
 }
