@@ -13,8 +13,17 @@ down:
 logs:
 	@docker-compose logs -f
 
+help:
+	@docker run --rm backblaze-server:1.0.0 --help
+
 go-build: CGO_ENABLED=0
 go-build: GOARCH=amd64
 go-build: GOOS=linux
 go-build:
 	@go build -mod=vendor -o bin/backblaze-server-amd64 ./app/backblaze-server/...
+
+run:
+	@./bin/backblaze-server-amd64 \
+		--domain files.127.0.0.1.nip.io \
+		--backblaze-application-key ${B2SERVER_BACKBLAZE_APPLICATION_KEY} \
+		--backblaze-key-id ${B2SERVER_BACKBLAZE_KEY_ID}
