@@ -1,11 +1,13 @@
 package main
 
 import (
+	"context"
 	"encoding/json"
 	"fmt"
 	"net/http"
+	"time"
 
-	"github.com/packago/config"
+	"github.com/pkg/errors"
 )
 
 // Account holds backblaze specific data.
@@ -26,26 +28,33 @@ type account struct {
 
 // AuthorizeAccount retrieves backblaze account data connected to a
 // configured keyID and applicationKey
-func authorizeAccount() (account, error) {
+func authorizeAccount(app *app) (account, error) {
+	// authorize account within 3 seconds.
+	d := time.Now().Add(3 * time.Second)
+	ctx, cancel := context.WithDeadline(context.Background(), d)
+	defer cancel()
+
 	var a account
-	api := config.File().GetString("backblaze.rootUrl")
-	url := fmt.Sprintf("%s/b2api/v2/b2_authorize_account", api)
-	req, err := http.NewRequest("GET", url, nil)
+	url := fmt.Sprintf("%s/b2api/v2/b2_authorize_account", app.api)
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
-		return a, err
+		return a, errors.Wrap(err, "creating request")
 	}
 
-	keyID := config.File().GetString("backblaze.keyID")
-	appKey := config.File().GetString("backblaze.applicationKey")
-	req.SetBasicAuth(keyID, appKey)
-	resp, err := http.DefaultClient.Do(req)
+	req.SetBasicAuth(app.keyID, app.appKey)
+	res, err := http.DefaultClient.Do(req)
 	if err != nil {
-		return a, err
+		return a, errors.Wrap(err, "processing request")
 	}
-	defer resp.Body.Close()
+	defer res.Body.Close()
 
-	if err = json.NewDecoder(resp.Body).Decode(&a); err != nil {
-		return a, err
+	if res.StatusCode != http.StatusOK {
+		return a, errors.New("authorizing account: response status: " + res.Status)
 	}
+
+	if err = json.NewDecoder(res.Body).Decode(&a); err != nil {
+		return a, errors.Wrap(err, "decoding json")
+	}
+
 	return a, nil
 }

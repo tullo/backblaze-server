@@ -22,7 +22,7 @@ type Cache struct {
 }
 
 // New creates an instance of an in-memory database.
-func New() Cache {
+func New() *Cache {
 	var c Cache
 	opt := badger.DefaultOptions("").WithInMemory(true)
 	db, err := badger.Open(opt)
@@ -31,7 +31,7 @@ func New() Cache {
 		os.Exit(1)
 	}
 	c.db = db
-	return c
+	return &c
 }
 
 // Close closes the underlying DB.
