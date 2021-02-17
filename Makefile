@@ -12,3 +12,9 @@ down:
 
 logs:
 	@docker-compose logs -f
+
+go-build: CGO_ENABLED=0
+go-build: GOARCH=amd64
+go-build: GOOS=linux
+go-build:
+	@go build -mod=vendor -o bin/backblaze-server-amd64 ./app/backblaze-server/...
