@@ -3,6 +3,10 @@ services:
   backblaze-server:
     build:
       context: .
+    environment:
+      B2SERVER_BACKBLAZE_APPLICATION_KEY: ${B2SERVER_BACKBLAZE_APPLICATION_KEY}
+      B2SERVER_BACKBLAZE_KEY_ID: ${B2SERVER_BACKBLAZE_KEY_ID}
+      B2SERVER_DOMAIN: ${B2SERVER_DOMAIN}
     image: backblaze-server:1.0.0
     ports:
     - published: 9090

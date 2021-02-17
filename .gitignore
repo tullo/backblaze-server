@@ -16,3 +16,4 @@
 
 config.json
 backblaze-server
+.env
