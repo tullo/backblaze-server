@@ -31,7 +31,9 @@ run:
 		--backblaze-key-id ${B2SERVER_BACKBLAZE_KEY_ID}
 
 sops-encrypt:
-	$$(go env GOPATH)/bin/sops --pgp E03741868C02382277A3D0A141611E17EA20D77B -e .env > .enc.env
+	@$$(go env GOPATH)/bin/sops \
+		--pgp E03741868C02382277A3D0A141611E17EA20D77B \
+		--output-type=dotenv -e .env > .enc.env
 
 sops-decrypt:
-	$$(go env GOPATH)/bin/sops -d .enc.env > .env
+	@$$(go env GOPATH)/bin/sops --output-type=dotenv -d .enc.env > .env
