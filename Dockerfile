@@ -1,9 +1,9 @@
-FROM golang:1.15.8-alpine3.13 AS go-builder
+FROM golang:1.16.0-alpine3.13 AS go-builder
 ENV CGO_ENABLED 0
 WORKDIR /build
 COPY . .
 WORKDIR /build/app/backblaze-server
-RUN go build -o server
+RUN go build -mod=vendor -o server
 
 FROM alpine:3.13.1
 RUN apk --no-cache add ca-certificates
