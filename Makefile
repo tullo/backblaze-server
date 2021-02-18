@@ -29,3 +29,9 @@ run:
 		--domain files.127.0.0.1.nip.io \
 		--backblaze-application-key ${B2SERVER_BACKBLAZE_APPLICATION_KEY} \
 		--backblaze-key-id ${B2SERVER_BACKBLAZE_KEY_ID}
+
+sops-encrypt:
+	$$(go env GOPATH)/bin/sops --pgp E03741868C02382277A3D0A141611E17EA20D77B -e .env > .enc.env
+
+sops-decrypt:
+	$$(go env GOPATH)/bin/sops -d .enc.env > .env

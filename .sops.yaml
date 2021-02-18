@@ -1,0 +1,4 @@
+creation_rules:
+  - path_regex: \.env$
+    pgp: >-
+      E03741868C02382277A3D0A141611E17EA20D77B
