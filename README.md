@@ -19,11 +19,12 @@ about:config
 network.trr.mode = 1
 ```
 
-Overwrite the default config with these environemt variables:
+Overwrite the default config with these environment variables:
 
 ```sh
 export B2SERVER_BACKBLAZE_APPLICATION_KEY=
 export B2SERVER_BACKBLAZE_KEY_ID=
+export B2SERVER_DOMAIN=
 ```
 
 Or with commandline options:
@@ -34,3 +35,4 @@ OPTIONS
   --backblaze-key-id
 ```
 
+Run `make help` for a listing of available options.
