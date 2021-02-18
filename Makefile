@@ -1,3 +1,4 @@
+SHELL = /bin/bash -o pipefail
 export COMPOSE_DOCKER_CLI_BUILD = 1
 export DOCKER_BUILDKIT = 1
 
@@ -22,6 +23,7 @@ go-build: GOOS=linux
 go-build:
 	@go build -mod=vendor -o bin/backblaze-server-amd64 ./app/backblaze-server/...
 
+include .env
 run:
 	@./bin/backblaze-server-amd64 \
 		--domain files.127.0.0.1.nip.io \
