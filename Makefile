@@ -23,7 +23,7 @@ go-build: GOOS=linux
 go-build:
 	@go build -mod=vendor -o bin/backblaze-server-amd64 ./app/backblaze-server/...
 
-include .env
+sinclude .env # silent include; no error if file is not yet decrypted (same as -include) 
 run:
 	@./bin/backblaze-server-amd64 \
 		--domain files.127.0.0.1.nip.io \
