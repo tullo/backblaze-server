@@ -30,7 +30,7 @@ type account struct {
 // configured keyID and applicationKey
 func authorizeAccount(app *app) (account, error) {
 	// authorize account within 3 seconds.
-	d := time.Now().Add(3 * time.Second)
+	d := time.Now().Add(15 * time.Second)
 	ctx, cancel := context.WithDeadline(context.Background(), d)
 	defer cancel()
 
