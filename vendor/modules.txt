@@ -72,11 +72,12 @@ github.com/dgraph-io/ristretto/z/simd
 github.com/dgryski/go-farm
 # github.com/dustin/go-humanize v1.0.0
 github.com/dustin/go-humanize
-# github.com/gabriel-vasile/mimetype v1.1.2
+# github.com/gabriel-vasile/mimetype v1.4.1
 ## explicit
 github.com/gabriel-vasile/mimetype
+github.com/gabriel-vasile/mimetype/internal/charset
 github.com/gabriel-vasile/mimetype/internal/json
-github.com/gabriel-vasile/mimetype/internal/matchers
+github.com/gabriel-vasile/mimetype/internal/magic
 # github.com/golang/glog v0.0.0-20160126235308-23def4e6c14b
 github.com/golang/glog
 # github.com/golang/protobuf v1.3.1
@@ -97,6 +98,8 @@ github.com/pkg/errors
 ## explicit
 github.com/tullo/conf
 # golang.org/x/net v0.1.0
+golang.org/x/net/html
+golang.org/x/net/html/atom
 golang.org/x/net/internal/timeseries
 golang.org/x/net/trace
 # golang.org/x/sys v0.1.0
