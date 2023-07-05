@@ -63,6 +63,8 @@ github.com/dgraph-io/badger/v2/skl
 github.com/dgraph-io/badger/v2/table
 github.com/dgraph-io/badger/v2/trie
 github.com/dgraph-io/badger/v2/y
+# github.com/dgraph-io/badger/v4 v4.1.0
+## explicit
 # github.com/dgraph-io/ristretto v0.1.1
 ## explicit
 github.com/dgraph-io/ristretto

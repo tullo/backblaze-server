@@ -6,6 +6,7 @@ require (
 	github.com/aws/aws-sdk-go v1.44.296
 	github.com/cespare/xxhash/v2 v2.1.2 // indirect
 	github.com/dgraph-io/badger/v2 v2.2007.4
+	github.com/dgraph-io/badger/v4 v4.1.0
 	github.com/dgraph-io/ristretto v0.1.1 // indirect
 	github.com/gabriel-vasile/mimetype v1.4.2
 	github.com/pkg/errors v0.9.1
