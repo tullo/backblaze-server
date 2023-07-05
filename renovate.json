@@ -17,5 +17,6 @@
     }
   ],
   "automerge": true,
-  "autoApprove": true
+  "autoApprove": true,
+  "dependencyDashboardApproval": false
 }
