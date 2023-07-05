@@ -8,6 +8,7 @@
   ],
   "packageRules": [
     {
+      "matchManagers":["go"],
       "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
       "matchPackageNames": [
         "github.com/aws/aws-sdk-go",
