@@ -16,5 +16,6 @@
       "automerge": true
     }
   ],
-  "automerge": true
+  "automerge": true,
+  "autoApprove": true
 }
