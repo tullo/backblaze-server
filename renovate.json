@@ -8,7 +8,7 @@
   ],
   "packageRules": [
     {
-      "matchManagers":["go"],
+      "matchManagers":["gomod"],
       "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
       "matchPackageNames": [
         "github.com/aws/aws-sdk-go",
@@ -20,8 +20,7 @@
   "automerge": true,
   "autoApprove": true,
   "dependencyDashboardApproval": false,
-  "patch": {
-    "autoApprove": true,
-    "automerge": true
-  }
+  "patch": {"autoApprove": true, "automerge": true},
+  "postUpdateOptions": ["gomodTidy"],
+  "constraints": {"go": "1.20"}
 }
