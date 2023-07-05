@@ -18,5 +18,9 @@
   ],
   "automerge": true,
   "autoApprove": true,
-  "dependencyDashboardApproval": false
+  "dependencyDashboardApproval": false,
+  "patch": {
+    "autoApprove": true,
+    "automerge": true
+  }
 }
