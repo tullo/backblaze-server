@@ -6,7 +6,7 @@ import (
 	"os"
 	"sync"
 
-	"github.com/dgraph-io/badger/v2"
+	"github.com/dgraph-io/badger/v4"
 )
 
 // File represents an entry in the cache.

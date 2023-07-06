@@ -1,5 +1,5 @@
 # github.com/aws/aws-sdk-go v1.44.296
-## explicit
+## explicit; go 1.11
 github.com/aws/aws-sdk-go/aws
 github.com/aws/aws-sdk-go/aws/arn
 github.com/aws/aws-sdk-go/aws/awserr
@@ -49,44 +49,56 @@ github.com/aws/aws-sdk-go/service/sso
 github.com/aws/aws-sdk-go/service/sso/ssoiface
 github.com/aws/aws-sdk-go/service/sts
 github.com/aws/aws-sdk-go/service/sts/stsiface
-# github.com/cespare/xxhash v1.1.0
-github.com/cespare/xxhash
 # github.com/cespare/xxhash/v2 v2.1.2
-## explicit
+## explicit; go 1.11
 github.com/cespare/xxhash/v2
-# github.com/dgraph-io/badger/v2 v2.2007.4
-## explicit
-github.com/dgraph-io/badger/v2
-github.com/dgraph-io/badger/v2/options
-github.com/dgraph-io/badger/v2/pb
-github.com/dgraph-io/badger/v2/skl
-github.com/dgraph-io/badger/v2/table
-github.com/dgraph-io/badger/v2/trie
-github.com/dgraph-io/badger/v2/y
+# github.com/dgraph-io/badger/v4 v4.1.0
+## explicit; go 1.19
+github.com/dgraph-io/badger/v4
+github.com/dgraph-io/badger/v4/fb
+github.com/dgraph-io/badger/v4/options
+github.com/dgraph-io/badger/v4/pb
+github.com/dgraph-io/badger/v4/skl
+github.com/dgraph-io/badger/v4/table
+github.com/dgraph-io/badger/v4/trie
+github.com/dgraph-io/badger/v4/y
 # github.com/dgraph-io/ristretto v0.1.1
-## explicit
+## explicit; go 1.12
 github.com/dgraph-io/ristretto
 github.com/dgraph-io/ristretto/z
 github.com/dgraph-io/ristretto/z/simd
-# github.com/dgryski/go-farm v0.0.0-20190423205320-6a90982ecee2
-github.com/dgryski/go-farm
 # github.com/dustin/go-humanize v1.0.0
+## explicit
 github.com/dustin/go-humanize
 # github.com/gabriel-vasile/mimetype v1.4.2
-## explicit
+## explicit; go 1.20
 github.com/gabriel-vasile/mimetype
 github.com/gabriel-vasile/mimetype/internal/charset
 github.com/gabriel-vasile/mimetype/internal/json
 github.com/gabriel-vasile/mimetype/internal/magic
+# github.com/gogo/protobuf v1.3.2
+## explicit; go 1.15
+github.com/gogo/protobuf/proto
 # github.com/golang/glog v0.0.0-20160126235308-23def4e6c14b
+## explicit
 github.com/golang/glog
+# github.com/golang/groupcache v0.0.0-20190702054246-869f871628b6
+## explicit
+github.com/golang/groupcache/lru
 # github.com/golang/protobuf v1.3.1
+## explicit
 github.com/golang/protobuf/proto
 # github.com/golang/snappy v0.0.3
+## explicit
 github.com/golang/snappy
+# github.com/google/flatbuffers v1.12.1
+## explicit
+github.com/google/flatbuffers/go
 # github.com/jmespath/go-jmespath v0.4.0
+## explicit; go 1.14
 github.com/jmespath/go-jmespath
 # github.com/klauspost/compress v1.12.3
+## explicit; go 1.13
 github.com/klauspost/compress/fse
 github.com/klauspost/compress/huff0
 github.com/klauspost/compress/zstd
@@ -95,14 +107,21 @@ github.com/klauspost/compress/zstd/internal/xxhash
 ## explicit
 github.com/pkg/errors
 # github.com/tullo/conf v1.3.7
-## explicit
+## explicit; go 1.15
 github.com/tullo/conf
+# go.opencensus.io v0.22.5
+## explicit; go 1.13
+go.opencensus.io
+go.opencensus.io/internal
+go.opencensus.io/trace
+go.opencensus.io/trace/internal
+go.opencensus.io/trace/tracestate
 # golang.org/x/net v0.8.0
+## explicit; go 1.17
 golang.org/x/net/html
 golang.org/x/net/html/atom
 golang.org/x/net/internal/timeseries
 golang.org/x/net/trace
 # golang.org/x/sys v0.6.0
+## explicit; go 1.17
 golang.org/x/sys/unix
-# golang.org/x/xerrors v0.0.0-20200804184101-5ec99f83aff1
-## explicit

@@ -12,7 +12,7 @@ import (
 	"os"
 	"strconv"
 
-	"github.com/dgraph-io/badger/v2"
+	"github.com/dgraph-io/badger/v4"
 	"github.com/gabriel-vasile/mimetype"
 	cached "github.com/tullo/backblaze-server/internal/cache"
 	"github.com/tullo/conf"

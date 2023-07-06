@@ -12,7 +12,7 @@
       "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
       "matchPackageNames": [
         "github.com/aws/aws-sdk-go",
-        "github.com/dgraph-io/badger/v2"
+        "github.com/dgraph-io/badger/v4"
       ],
       "automerge": true
     }
