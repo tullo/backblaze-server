@@ -3,7 +3,7 @@ module github.com/tullo/backblaze-server
 go 1.21
 
 require (
-	github.com/aws/aws-sdk-go v1.54.9
+	github.com/aws/aws-sdk-go v1.54.10
 	github.com/dgraph-io/badger/v4 v4.2.0
 	github.com/gabriel-vasile/mimetype v1.4.4
 	github.com/pkg/errors v0.9.1
