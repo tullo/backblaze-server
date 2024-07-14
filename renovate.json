@@ -22,6 +22,6 @@
   "dependencyDashboardApproval": false,
   "patch": {"autoApprove": true, "automerge": true},
   "postUpdateOptions": ["gomodTidy"],
-  "constraints": {"go": "1.21"},
+  "constraints": {"go": "1.22"},
   "ignoreTests": true
 }
