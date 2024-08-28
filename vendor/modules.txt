@@ -54,7 +54,7 @@ github.com/aws/aws-sdk-go/service/sts/stsiface
 # github.com/cespare/xxhash/v2 v2.3.0
 ## explicit; go 1.11
 github.com/cespare/xxhash/v2
-# github.com/dgraph-io/badger/v4 v4.2.0
+# github.com/dgraph-io/badger/v4 v4.3.0
 ## explicit; go 1.19
 github.com/dgraph-io/badger/v4
 github.com/dgraph-io/badger/v4/fb
@@ -64,8 +64,8 @@ github.com/dgraph-io/badger/v4/skl
 github.com/dgraph-io/badger/v4/table
 github.com/dgraph-io/badger/v4/trie
 github.com/dgraph-io/badger/v4/y
-# github.com/dgraph-io/ristretto v0.1.1
-## explicit; go 1.12
+# github.com/dgraph-io/ristretto v0.1.2-0.20240116140435-c67e07994f91
+## explicit; go 1.19
 github.com/dgraph-io/ristretto
 github.com/dgraph-io/ristretto/z
 github.com/dgraph-io/ristretto/z/simd
@@ -81,23 +81,17 @@ github.com/gabriel-vasile/mimetype/internal/magic
 # github.com/gogo/protobuf v1.3.2
 ## explicit; go 1.15
 github.com/gogo/protobuf/proto
-# github.com/golang/glog v1.2.2
-## explicit; go 1.19
-github.com/golang/glog
-github.com/golang/glog/internal/logsink
-github.com/golang/glog/internal/stackdump
 # github.com/golang/groupcache v0.0.0-20210331224755-41bb18bfe9da
 ## explicit
 github.com/golang/groupcache/lru
 # github.com/golang/protobuf v1.5.4
 ## explicit; go 1.17
 github.com/golang/protobuf/proto
-# github.com/golang/snappy v0.0.4
-## explicit
-github.com/golang/snappy
 # github.com/google/flatbuffers v24.3.25+incompatible
 ## explicit
 github.com/google/flatbuffers/go
+# github.com/google/go-cmp v0.6.0
+## explicit; go 1.13
 # github.com/jmespath/go-jmespath v0.4.0
 ## explicit; go 1.14
 github.com/jmespath/go-jmespath
@@ -107,7 +101,10 @@ github.com/klauspost/compress
 github.com/klauspost/compress/fse
 github.com/klauspost/compress/huff0
 github.com/klauspost/compress/internal/cpuinfo
+github.com/klauspost/compress/internal/race
 github.com/klauspost/compress/internal/snapref
+github.com/klauspost/compress/s2
+github.com/klauspost/compress/snappy
 github.com/klauspost/compress/zstd
 github.com/klauspost/compress/zstd/internal/xxhash
 # github.com/pkg/errors v0.9.1
@@ -123,13 +120,13 @@ go.opencensus.io/internal
 go.opencensus.io/trace
 go.opencensus.io/trace/internal
 go.opencensus.io/trace/tracestate
-# golang.org/x/net v0.27.0
+# golang.org/x/net v0.28.0
 ## explicit; go 1.18
 golang.org/x/net/html
 golang.org/x/net/html/atom
 golang.org/x/net/internal/timeseries
 golang.org/x/net/trace
-# golang.org/x/sys v0.22.0
+# golang.org/x/sys v0.24.0
 ## explicit; go 1.18
 golang.org/x/sys/unix
 # google.golang.org/protobuf v1.34.2
