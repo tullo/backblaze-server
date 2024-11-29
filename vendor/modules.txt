@@ -54,7 +54,7 @@ github.com/aws/aws-sdk-go/service/sts/stsiface
 # github.com/cespare/xxhash/v2 v2.3.0
 ## explicit; go 1.11
 github.com/cespare/xxhash/v2
-# github.com/dgraph-io/badger/v4 v4.4.0
+# github.com/dgraph-io/badger/v4 v4.5.0
 ## explicit; go 1.21
 github.com/dgraph-io/badger/v4
 github.com/dgraph-io/badger/v4/fb
@@ -78,15 +78,9 @@ github.com/gabriel-vasile/mimetype
 github.com/gabriel-vasile/mimetype/internal/charset
 github.com/gabriel-vasile/mimetype/internal/json
 github.com/gabriel-vasile/mimetype/internal/magic
-# github.com/gogo/protobuf v1.3.2
-## explicit; go 1.15
-github.com/gogo/protobuf/proto
 # github.com/golang/groupcache v0.0.0-20210331224755-41bb18bfe9da
 ## explicit
 github.com/golang/groupcache/lru
-# github.com/golang/protobuf v1.5.4
-## explicit; go 1.17
-github.com/golang/protobuf/proto
 # github.com/google/flatbuffers v24.3.25+incompatible
 ## explicit
 github.com/google/flatbuffers/go
@@ -137,7 +131,6 @@ google.golang.org/protobuf/internal/descfmt
 google.golang.org/protobuf/internal/descopts
 google.golang.org/protobuf/internal/detrand
 google.golang.org/protobuf/internal/editiondefaults
-google.golang.org/protobuf/internal/editionssupport
 google.golang.org/protobuf/internal/encoding/defval
 google.golang.org/protobuf/internal/encoding/messageset
 google.golang.org/protobuf/internal/encoding/tag
@@ -154,10 +147,7 @@ google.golang.org/protobuf/internal/set
 google.golang.org/protobuf/internal/strs
 google.golang.org/protobuf/internal/version
 google.golang.org/protobuf/proto
-google.golang.org/protobuf/reflect/protodesc
 google.golang.org/protobuf/reflect/protoreflect
 google.golang.org/protobuf/reflect/protoregistry
 google.golang.org/protobuf/runtime/protoiface
 google.golang.org/protobuf/runtime/protoimpl
-google.golang.org/protobuf/types/descriptorpb
-google.golang.org/protobuf/types/gofeaturespb
