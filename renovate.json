@@ -1,15 +1,22 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "config:base",
+    "config:recommended",
     ":automergeMinor",
     ":automergePatch",
     ":automergeDigest"
   ],
   "packageRules": [
     {
-      "matchManagers":["gomod"],
-      "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
+      "matchManagers": [
+        "gomod"
+      ],
+      "matchUpdateTypes": [
+        "minor",
+        "patch",
+        "pin",
+        "digest"
+      ],
       "matchPackageNames": [
         "github.com/aws/aws-sdk-go",
         "github.com/dgraph-io/badger/v4"
@@ -20,8 +27,15 @@
   "automerge": true,
   "autoApprove": true,
   "dependencyDashboardApproval": false,
-  "patch": {"autoApprove": true, "automerge": true},
-  "postUpdateOptions": ["gomodTidy"],
-  "constraints": {"go": "1.23"},
+  "patch": {
+    "autoApprove": true,
+    "automerge": true
+  },
+  "postUpdateOptions": [
+    "gomodTidy"
+  ],
+  "constraints": {
+    "go": "1.23"
+  },
   "ignoreTests": true
 }
