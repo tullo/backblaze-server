@@ -5,7 +5,7 @@ COPY . .
 WORKDIR /build/app/backblaze-server
 RUN go build -mod=vendor -o server
 
-FROM alpine:3.21.2
+FROM alpine:3.21.3
 RUN apk --no-cache add ca-certificates
 RUN addgroup -g 3000 -S app && adduser -u 100000 -S app -G app --no-create-home --disabled-password \
     && mkdir -p /app/badger.db && chown app:app /app/badger.db
