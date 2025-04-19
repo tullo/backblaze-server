@@ -1,6 +1,6 @@
 module github.com/tullo/backblaze-server
 
-go 1.22.12
+go 1.24.2
 toolchain go1.24.2
 
 require (
