@@ -4,7 +4,7 @@ go 1.24.2
 
 require (
 	github.com/aws/aws-sdk-go v1.55.8
-	github.com/dgraph-io/badger/v4 v4.9.0
+	github.com/dgraph-io/badger/v4 v4.9.1
 	github.com/gabriel-vasile/mimetype v1.4.13
 	github.com/pkg/errors v0.9.1
 	github.com/tullo/conf v1.3.7
